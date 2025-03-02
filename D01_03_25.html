@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+        }
+        
+        label {
+            display: block;
+            margin: 8px 0;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .student-entry {
+            display: flex;
+            /* Use flexbox for horizontal layout */
+            justify-content: space-between;
+            /* Ensure space between content and delete button */
+            padding: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            position: relative;
+            /* For positioning the delete button */
+        }
+        
+        .student-details {
+            flex-grow: 1;
+            /* Allow student details to take up the available space */
+        }
+        
+        .delete-btn {
+            width: 35%;
+            background-color: red;
+            color: white;
+            padding: 3px 3px;
+            border: none;
+            cursor: pointer;
+            display: none;
+            /* Hide delete button by default */
+        }
+        
+        .student-entry:hover .delete-btn {
+            display: inline-block;
+            /* Show delete button only on hover */
+        }
+        
+        .delete-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration</h1>
+    <div class="form-container">
+        <form id="studentForm">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" required>
+
+            <label for="course">Course</label>
+            <input type="text" id="course" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <h2>Registered Students</h2>
+    <div id="studentsList"></div>
+
+    <script src="D01_03_25.js"></script>
+</body>
+
+</html>
